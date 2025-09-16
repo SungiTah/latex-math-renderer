@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    font-feature-settings: 'cv03', 'cv04', 'cv11';
+  }
+}
+
+@layer components {
+  /* Custom scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(156 163 175) transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgb(156 163 175);
+    border-radius: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(107 114 128);
+  }
+  
+  /* Dark mode scrollbar */
+  .dark .custom-scrollbar {
+    scrollbar-color: rgb(75 85 99) transparent;
+  }
+  
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgb(75 85 99);
+  }
+  
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(107 114 128);
+  }
+  
+  /* History item styles */
+  .history-item {
+    @apply p-3 border border-gray-200 dark:border-gray-600 rounded-lg cursor-pointer transition-all duration-200 hover:border-blue-300 dark:hover:border-blue-500 hover:shadow-md bg-gray-50 dark:bg-gray-700/50;
+  }
+  
+  .history-item:hover {
+    transform: translateY(-1px);
+  }
+  
+  .history-item.active {
+    @apply border-blue-500 dark:border-blue-400 bg-blue-50 dark:bg-blue-900/20;
+  }
+  
+  /* Math output container */
+  .math-container {
+    @apply overflow-x-auto custom-scrollbar;
+  }
+  
+  /* CodeMirror custom styles */
+  .cm-editor {
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+  }
+  
+  .cm-focused {
+    @apply outline-none;
+  }
+  
+  .cm-content {
+    @apply font-mono text-sm leading-relaxed p-4;
+  }
+  
+  .cm-cursor {
+    @apply border-blue-500;
+  }
+  
+  .cm-selectionBackground {
+    @apply bg-blue-200 dark:bg-blue-800;
+  }
+  
+  /* Button hover effects */
+  .btn-hover {
+    @apply transition-all duration-200 hover:scale-105 active:scale-95;
+  }
+  
+  /* Fade in animation */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Slide animations */
+  .slide-in-left {
+    animation: slideInLeft 0.3s ease-out;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.3s ease-out;
+  }
+  
+  /* Bounce animation */
+  .bounce-in {
+    animation: bounceIn 0.6s ease-out;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes bounceIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Glass effect */
+  .glass {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .dark .glass {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* KaTeX custom styles */
+.katex-display {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.katex {
+  font-size: 1.1em;
+}
+
+/* Error styling */
+.katex-error {
+  color: #e53e3e !important;
+  background-color: #fed7d7 !important;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.dark .katex-error {
+  background-color: #742a2a !important;
+  color: #feb2b2 !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .katex {
+    font-size: 1em;
+  }
+  
+  .katex-display {
+    margin: 0.5em 0;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .math-container {
+    overflow: visible !important;
+  }
+}

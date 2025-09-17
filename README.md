@@ -179,7 +179,7 @@ Created with ❤️ by **Mohamed Taha Laaouan**
 
 If you found this project helpful, please consider giving it a star! ⭐
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/latex-math-renderer&type=Date)](https://star-history.com/#yourusername/latex-math-renderer&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/latex-math-renderer&type=Date)](https://star-history.com/SungiTah/latex-math-renderer&Date)
 
 ---
 

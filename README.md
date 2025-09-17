@@ -40,7 +40,7 @@ A modern, responsive, and stylish web application for rendering LaTeX mathematic
 
 ## 🎯 Live Demo
 
-**[Try it now!](https://yourusername.github.io/latex-math-renderer)**
+**[Try it now!](https://sungitah.github.io/latex-math-renderer/)**
 
 ## 🚀 Quick Start
 
@@ -172,8 +172,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Created with ❤️ by **Mohamed Taha Laaouan**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [@SungiTah](https://github.com/SungiTah/)
+- Email: sungitah4@gmail.com
 
 ## 🌟 Star History
 
